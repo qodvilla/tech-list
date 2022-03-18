@@ -10,21 +10,21 @@ import {
 import { Text } from "../../../components/typography/typography.component";
 import { Spacer } from "../../../components/Spacer/Spacer.component";
 
-export const ProductCard = () => (
+export const ProductCard = ({itemName, itemPrice, itemSeller, itemImage}) => (
   <DetailsCard>
     <Card.Cover
       source={{
-        uri: "https://www.xda-developers.com/files/2021/10/Alienware-Aurora-front-and-back.jpg",
+        uri: itemImage,
       }}
     />
     <Divider />
     <CardContent>
-      <Text variant="innerTitle">Alienware Gaming PC</Text>
+      <Text variant="innerTitle">{itemName}</Text>
       <Spacer position="top" size="small">
-        <Text variant="label">R48 999</Text>
+        <Text variant="label">{itemPrice}</Text>
       </Spacer>
       <Spacer position="top" size="large">
-        <Text variant="caption">Sold by: Katrina</Text>
+        <Text variant="caption">Sold by: {itemSeller}</Text>
       </Spacer>
       <CardActions>
         <BuyButton mode="contained">
