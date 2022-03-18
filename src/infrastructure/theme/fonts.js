@@ -1,6 +1,7 @@
 export const fonts = {
-    body: "Arimo_400Regular",
-    heading: "Poppins_400Regular",
+    body: "Inconsolata_400Regular",
+    heading: "TitilliumWeb_400Regular",
+    monospace: "RobotoMono_500Medium"
   };
   
   export const fontWeights = {
