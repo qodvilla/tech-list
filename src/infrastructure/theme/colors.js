@@ -4,7 +4,8 @@ export const colors = {
     },
     text: {
         primary: "#00473e", //Headline & button text
-        secondary: "#475d5b" //Paragraph
+        secondary: "#475d5b", //Paragraph
+        error: "#fa5246"
     },
     bg: {
         primary: "#f2f7f5",

@@ -3,12 +3,12 @@ import { Card, Divider } from "react-native-paper";
 import {
   DetailsCard,
   CardContent,
-  Text,
   ParagraphText,
   CardActions,
   BuyButton,
   ButtonText
 } from "./product-info-card.style";
+import { Text } from "../../../components/typography/typography.component";
 
 export const ProductCard = () => (
   <DetailsCard>
@@ -19,9 +19,9 @@ export const ProductCard = () => (
     />
     <Divider />
     <CardContent>
-      <Text>Alienware Gaming PC</Text>
-      <ParagraphText>R 48 999</ParagraphText>
-      <ParagraphText>Sold by: Katrina</ParagraphText>
+      <Text variant="innerTitle">Alienware Gaming PC</Text>
+      <Text variant="label">R48 999</Text>
+      <Text variant="caption">Sold by: Katrina</Text>
       <CardActions>
         <BuyButton mode="contained">
           <ButtonText>Buy</ButtonText>
