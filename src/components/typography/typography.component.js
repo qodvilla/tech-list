@@ -1,9 +1,4 @@
-import React from "react";
 import styled from "styled-components/native";
-
-// TODO:
-// Have functions that generate different style strings
-// Depending on the variant + theme provided
 
 const defautTextStyles = (theme) => {
   return `
