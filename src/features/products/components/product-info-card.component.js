@@ -1,24 +1,14 @@
 import React from "react";
-import styled from "styled-components/native";
-import { Button, Card, Title, Paragraph } from "react-native-paper";
-
-const Text = styled(Title)`
-    font-size: ${({ theme }) => theme.fontSizes.h5}
-    color: ${({ theme }) => theme.colors.text.primary}
-    font-family: ${({ theme }) => theme.fonts.heading}
-`;
-
-const DetailsCard = styled(Card)`
-  margin: ${({ theme }) => theme.space[3]};
-`;
-
-const BuyButton = styled(Button).attrs({color: "#faae2b"})`
-  padding: ${({ theme }) => theme.space[0]} ${({ theme }) => theme.space[3]};
-`;
-const CardActions = styled(Card.Actions)`
-  padding: ${({ theme }) => theme.space[3]} ${({ theme }) => theme.space[0]}
-    ${({ theme }) => theme.space[0]};
-`;
+import { Card, Divider } from "react-native-paper";
+import {
+  DetailsCard,
+  CardContent,
+  Text,
+  ParagraphText,
+  CardActions,
+  BuyButton,
+  ButtonText
+} from "./product-info-card.style";
 
 export const ProductCard = () => (
   <DetailsCard>
@@ -27,13 +17,16 @@ export const ProductCard = () => (
         uri: "https://www.xda-developers.com/files/2021/10/Alienware-Aurora-front-and-back.jpg",
       }}
     />
-    <Card.Content>
+    <Divider />
+    <CardContent>
       <Text>Alienware Gaming PC</Text>
-      <Paragraph>R 48 999</Paragraph>
-      <Paragraph>Sold by: Katrina</Paragraph>
+      <ParagraphText>R 48 999</ParagraphText>
+      <ParagraphText>Sold by: Katrina</ParagraphText>
       <CardActions>
-        <BuyButton mode="contained">Buy</BuyButton>
+        <BuyButton mode="contained">
+          <ButtonText>Buy</ButtonText>
+        </BuyButton>
       </CardActions>
-    </Card.Content>
+    </CardContent>
   </DetailsCard>
 );
